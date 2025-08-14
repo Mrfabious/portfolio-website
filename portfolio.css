@@ -122,6 +122,13 @@ header{
     top: 0;
     z-index: 1000;
 }
+.profile-img{
+    margin-top: 20px;
+}
+.projects-img{
+    width: 50%;
+    margin-right: 100px;
+}
 
 /*nav{
     display:flex;
