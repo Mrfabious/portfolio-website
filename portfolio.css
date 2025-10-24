@@ -124,6 +124,7 @@ header{
 }
 .profile-img{
     margin-top: 20px;
+    border-radius: 0px;
 }
 .projects-img{
     width: 50%;
