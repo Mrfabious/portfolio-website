@@ -17,6 +17,7 @@ body{
     line-height: 1.6;
     color: #333;
     background-color: #fff;
+    scroll-behavior: smooths;
 }
 a{
     text-decoration: none;
@@ -30,9 +31,7 @@ html{
 img {
     width: 60%;
 }
-.skills-image {
-    height: 100%;
-}
+
 .navbar{
     min-height: 70px;
     width: 91%;
@@ -97,7 +96,7 @@ header{
 
 .hero-content{
     margin-top: 4px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    /* box-shadow: 0 4px 6px rgba(0,0,0,0.1); */
     margin-bottom: 20px;
 }
 
@@ -124,8 +123,9 @@ header{
 }
 
 .profile-image{
-    width: 400px;
+    width: 350px;
     margin-top: 20px;
+    border-radius: 50%;
 }
 
 
@@ -289,21 +289,23 @@ section:nth-child(4)
 }
 #skills ul{
     display: flex;
-    flex-wrap: wrap;
     gap: 3rem;
     justify-content: center;
     list-style: none;
 }
-
+.skills-image{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
 
 #skills ul li{
     background: #f0f0f0;
     color: #333;
-    width: 200px;
-    height: 100px;
+    padding: 16px;
+    background: transparent;
     align-content: center;
     text-align: center;
-    padding: 0.7rem 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(97, 38, 38, 0.05);
 }
@@ -320,7 +322,7 @@ section:nth-child(4)
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.project img{
+.projects-img{
     width: 200px;
     border-radius: 5px;
     transition: transform 0.4s ease;
@@ -357,12 +359,12 @@ form button{
     padding: 0.8rem;
     border: none;
     border-radius: 5px;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: 0.3s ease, transform 0.2s ease;
     cursor: pointer;
 }
 form button:hover{
     background: #0056b3;
-    transform: scale(1.05);
+    transform: scale(01.05);
 }
 
 /*footer*/
@@ -403,10 +405,11 @@ footer{
        top: 70px;
        gap: 0;
        flex-direction: column;
-       background-color: #ffffff;
+       background-color: rgba(255, 255, 255, 0.5);
        width: 100%;
        text-align: center;
-       transition: 0.3s;    
+       transition: 0.3s; 
+       backdrop-filter: blur(20px) ;   
     }
     .nav-item{
         margin: 16px 0;
@@ -429,7 +432,13 @@ footer{
         width: 300px;
         display: none;
     }
+    
 
+
+    .skills-image {
+        width: 60px;
+        display: flex;
+    }
      #skills h2 {
         display: flex;
         text-align: center;
@@ -509,10 +518,22 @@ footer{
     .projects-img {
         padding: 10px;
     }
+
+    .greeting-container h1 {
+        padding: 10px;
+        font-size: 60px;
+    }
+    .greeting-container p {
+        padding: 10px;
+    }
      
     #about{
         min-height: 60vh;
         text-align: center;
+    }
+    .about-content img {
+        border-radius: 50%;
+        width: 60%;
     }
 
     }
