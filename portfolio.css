@@ -81,7 +81,7 @@ img {
 
 header{
     background: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.09);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -96,7 +96,7 @@ header{
 
 .hero-content{
     margin-top: 4px;
-    /* box-shadow: 0 4px 6px rgba(0,0,0,0.1); */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.027);
     margin-bottom: 20px;
 }
 
@@ -140,11 +140,11 @@ header{
 }
 
 .hero-btns{
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .btn-project1{
     display: inline-block;
-    padding: 0.7rem 1.5rem;
+    padding: 8px;
     background: #007bff;
     color: white;
     border-radius: 5px;
@@ -152,9 +152,10 @@ header{
     transition: 0.3s;
 }
 
-.btn-project{
+.hero-btns .btn-project{
     display: inline-block;
-    padding: 0.7rem 1.5rem;
+    padding: 8px;
+    text-align: center;
     border: 1px solid #007bff;
     color:rgb(82, 78, 78);
     border-radius: 5px;
@@ -184,7 +185,7 @@ section h2{
 }
 
 /* fade & slide animations*/
-@keyframes slideInRight {
+/* @keyframes slideInRight {
     from{ opacity: 0; transform:translateX(50px); }
     to { opacity: 1; transform: translateX(0); }
 }
@@ -205,7 +206,7 @@ section:nth-child(3)
 {animation-delay: 0.6s;}
 section:nth-child(4)
 {animation-delay: 0.8s;}
-
+*/
 #about{
     align-items: center;
     text-align: center;
@@ -382,7 +383,7 @@ footer{
 
 /*Responsive Design*/
 
-@media (max-width: 640px) {
+@media (max-width: 600px) {
     .nav-menu .nav-link:hover{
     background: #9a9b9c0b;
     padding: 8px 300px;
@@ -426,6 +427,10 @@ footer{
         align-items: center;
         margin-top: 35px;
     }
+    .hero-content{
+        height: 100vh;
+        margin-bottom: 20px;
+    }
     .profile-image{
         margin-bottom: 30px;
         height: 300px;
@@ -434,10 +439,25 @@ footer{
     }
     
 
-
+     #skills .skills-image {
+        padding: 5px;
+        align-items: center;
+     }
+     #skills ul li img {
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        flex-wrap: wrap;
+     }
+     #skills ul li {
+        padding: 5px;
+     }
     .skills-image {
-        width: 60px;
+        width: 45px;
+        height: 45px;
         display: flex;
+
+        justify-content: center;
     }
      #skills h2 {
         display: flex;
@@ -472,8 +492,8 @@ footer{
     }
 
     .hero-content{
-        height: 80vh;
         align-items: center;
+        height: 90vh;
     }
     
     .project{
@@ -495,6 +515,7 @@ footer{
         font-size: 18px;
         margin-left: 10px;
         line-height: 1;
+
     }
     .btn:hover {
         background-color: #0056b3;
@@ -510,10 +531,12 @@ footer{
         margin-top: 15px;
     }
     .btn-project1 {
-        width: 100%;
+        font-size: 14px;
     }
-    .btn-project {
-        width: 100%;
+    .hero-btns .btn-project {
+        justify-content: center;
+        text-align: center;
+        font-size: 14px;
     }
     .projects-img {
         padding: 10px;
@@ -525,6 +548,7 @@ footer{
     }
     .greeting-container p {
         padding: 10px;
+        margin-top: 2px;
     }
      
     #about{
@@ -533,8 +557,10 @@ footer{
     }
     .about-content img {
         border-radius: 50%;
-        width: 60%;
+        width: 90%;
     }
+
+    
 
     }
 
